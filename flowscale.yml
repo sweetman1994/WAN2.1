@@ -11,4 +11,12 @@ workflows:
     name: project_cover_1.json
     description: ''
     file: flowscale_assets/project_cover_1.json
-normal_workflows: []
+normal_workflows:
+  - id: t45kvu3dccs
+    name: project_cover_1.json
+    file: flowscale_assets/project_cover_1.json
+    version: 0
+  - id: cbc750yjc1p
+    name: wani2v.json
+    file: flowscale_assets/wani2v.json
+    version: 0
