@@ -11,6 +11,15 @@ workflows:
     name: project_cover_1.json
     description: ''
     file: flowscale_assets/project_cover_1.json
+  - id: d0cljqxghgt
+    name: wan_i2v_cumshot_workflow_api.json
+    file: workflow/wan_i2v_cumshot_workflow_api.json
+    version: 1
+    description: ''
+    inputs: []
+    outputs: []
+    skip_preprocess: true
+    advancedConfig: false
 normal_workflows:
   - id: t45kvu3dccs
     name: project_cover_1.json
@@ -23,4 +32,4 @@ normal_workflows:
   - id: pncv0i2snvr
     name: wan_i2v_cumshot_workflow.json
     file: workflow/wan_i2v_cumshot_workflow.json
-    version: 0
+    version: 1
