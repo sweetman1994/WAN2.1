@@ -20,3 +20,7 @@ normal_workflows:
     name: wani2v.json
     file: flowscale_assets/wani2v.json
     version: 0
+  - id: pncv0i2snvr
+    name: wan_i2v_cumshot_workflow.json
+    file: workflow/wan_i2v_cumshot_workflow.json
+    version: 0
