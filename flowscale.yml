@@ -1,4 +1,3 @@
-# Flowscale configuration file. Do not edit directly  
 version: 0
 builder_version: latest
 comfyui_version: ComfyUI-0.3.27
@@ -7,6 +6,9 @@ models: models.json
 custom_nodes: custom_nodes.json
 user_models: user_models.json
 user_custom_nodes: user_custom_nodes.json
-workflows: []
+workflows:
+  - id: c7czbn9jat
+    name: project_cover_1.json
+    description: ''
+    file: flowscale_assets/project_cover_1.json
 normal_workflows: []
-  
