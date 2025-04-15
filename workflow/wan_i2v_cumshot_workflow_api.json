@@ -1,0 +1,482 @@
+{
+    "80": {
+        "inputs": {
+            "frame_rate": 16,
+            "loop_count": 0,
+            "filename_prefix": "2025-04-15/original/074811-299538357940240",
+            "format": "video/h264-mp4",
+            "pix_fmt": "yuv420p",
+            "crf": 19,
+            "save_metadata": false,
+            "trim_to_audio": false,
+            "pingpong": false,
+            "save_output": true,
+            "images": [
+                "264",
+                0
+            ]
+        },
+        "class_type": "VHS_VideoCombine",
+        "_meta": {
+            "title": "Video Combine 🎥🅥🅗🅢"
+        }
+    },
+    "95": {
+        "inputs": {
+            "frame_rate": 16,
+            "loop_count": 0,
+            "filename_prefix": "2025-04-15/074811-299538357940240",
+            "format": "video/h264-mp4",
+            "pix_fmt": "yuv420p",
+            "crf": 19,
+            "save_metadata": false,
+            "trim_to_audio": false,
+            "pingpong": false,
+            "save_output": true,
+            "images": [
+                "98",
+                0
+            ]
+        },
+        "class_type": "VHS_VideoCombine",
+        "_meta": {
+            "title": "Video Combine 🎥🅥🅗🅢"
+        }
+    },
+    "98": {
+        "inputs": {
+            "upscale_method": "lanczos",
+            "width": [
+                "220",
+                0
+            ],
+            "height": [
+                "219",
+                0
+            ],
+            "crop": "center",
+            "image": [
+                "99",
+                0
+            ]
+        },
+        "class_type": "ImageScale",
+        "_meta": {
+            "title": "Upscale Image"
+        }
+    },
+    "99": {
+        "inputs": {
+            "image": [
+                "272",
+                0
+            ]
+        },
+        "class_type": "ImageUpscaleWithModel",
+        "_meta": {
+            "title": "Upscale Image (using Model)"
+        }
+    },
+    "154": {
+        "inputs": {
+            "model_name": "4xLSDIR.pth"
+        },
+        "class_type": "UpscaleModelLoader",
+        "_meta": {
+            "title": "Upscaler"
+        }
+    },
+    "155": {
+        "inputs": {
+            "UPSCALE_MODEL": [
+                "154",
+                0
+            ]
+        },
+        "_meta": {}
+    },
+    "218": {
+        "inputs": {
+            "image": "574166561d5710c4fe1b06c95f1ee8d4-large.jpg"
+        },
+        "class_type": "LoadImage",
+        "_meta": {
+            "title": "Input Image"
+        }
+    },
+    "219": {
+        "inputs": {
+            "value": "a*b",
+            "a": [
+                "222",
+                1
+            ],
+            "b": [
+                "226",
+                0
+            ]
+        },
+        "class_type": "SimpleMath+",
+        "_meta": {
+            "title": "height"
+        }
+    },
+    "220": {
+        "inputs": {
+            "value": "a*b",
+            "a": [
+                "222",
+                0
+            ],
+            "b": [
+                "226",
+                0
+            ]
+        },
+        "class_type": "SimpleMath+",
+        "_meta": {
+            "title": "width"
+        }
+    },
+    "222": {
+        "inputs": {
+            "image": [
+                "223",
+                0
+            ]
+        },
+        "class_type": "GetImageSize+",
+        "_meta": {
+            "title": "🔧 Get Image Size"
+        }
+    },
+    "223": {
+        "inputs": {
+            "start": 0,
+            "length": 1,
+            "image": [
+                "224",
+                0
+            ]
+        },
+        "class_type": "ImageFromBatch+",
+        "_meta": {
+            "title": "🔧 Image From Batch"
+        }
+    },
+    "224": {
+        "inputs": {
+            "images": [
+                "264",
+                0
+            ]
+        },
+        "class_type": "ImageListToImageBatch",
+        "_meta": {
+            "title": "Image List to Image Batch"
+        }
+    },
+    "226": {
+        "inputs": {
+            "Number": "2"
+        },
+        "class_type": "Int",
+        "_meta": {
+            "title": "Upscale Factor"
+        }
+    },
+    "229": {
+        "inputs": {
+            "unet_name": "wan2.1_i2v_480p_14B_fp8_scaled.safetensors",
+            "weight_dtype": "default"
+        },
+        "class_type": "UNETLoader",
+        "_meta": {
+            "title": "Load Diffusion Model"
+        }
+    },
+    "231": {
+        "inputs": {
+            "clip_name": "umt5_xxl_fp8_e4m3fn_scaled.safetensors",
+            "type": "wan",
+            "device": "default"
+        },
+        "class_type": "CLIPLoader",
+        "_meta": {
+            "title": "Load CLIP"
+        }
+    },
+    "232": {
+        "inputs": {
+            "vae_name": "wan_2.1_vae.safetensors"
+        },
+        "class_type": "VAELoader",
+        "_meta": {
+            "title": "Load VAE"
+        }
+    },
+    "233": {
+        "inputs": {
+            "clip_name": "clip_vision_h.safetensors"
+        },
+        "class_type": "CLIPVisionLoader",
+        "_meta": {
+            "title": "Load CLIP Vision"
+        }
+    },
+    "236": {
+        "inputs": {
+            "width": 736,
+            "height": 544,
+            "length": 61,
+            "batch_size": 1,
+            "vae": [
+                "232",
+                0
+            ],
+            "clip_vision_output": [
+                "239",
+                0
+            ],
+            "start_image": [
+                "218",
+                0
+            ]
+        },
+        "class_type": "WanImageToVideo",
+        "_meta": {
+            "title": "Set Video Length/Width/Height WanImageToVideo"
+        }
+    },
+    "239": {
+        "inputs": {
+            "crop": "none",
+            "clip_vision": [
+                "233",
+                0
+            ],
+            "image": [
+                "218",
+                0
+            ]
+        },
+        "class_type": "CLIPVisionEncode",
+        "_meta": {
+            "title": "CLIP Vision Encode"
+        }
+    },
+    "243": {
+        "inputs": {
+            "text": "A woman is smiling and sitting on the floor. Cum shoots from off screen and lands on her face and on her eye and on her hair. Her expression quickly changes as she looks shocked and turns toward the source of the cum looking surprised but happy. A man's penis and hand partially enter the frame from the side and you can see him stroking his penis back and forth with his hand.",
+            "clip": [
+                "231",
+                0
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "244": {
+        "inputs": {
+            "text": "è²è°è³ä¸½ï¼è¿æï¼éæï¼ç»èæ¨¡ç³ä¸æ¸ï¼å­å¹ï¼é£æ ¼ï¼ä½åï¼ç»ä½ï¼ç»é¢ï¼éæ­¢ï¼æ´ä½åç°ï¼æå·®è´¨éï¼ä½è´¨éï¼JPEGåç¼©æ®çï¼ä¸éçï¼æ®ç¼ºçï¼å¤ä½çææï¼ç»å¾ä¸å¥½çæé¨ï¼ç»å¾ä¸å¥½çè¸é¨ï¼ç¸å½¢çï¼æ¯å®¹çï¼å½¢æç¸å½¢çè¢ä½ï¼ææèåï¼éæ­¢ä¸å¨çç»é¢ï¼æä¹±çèæ¯ï¼ä¸æ¡è¿ï¼èæ¯äººå¾å¤ï¼åçèµ°",
+            "clip": [
+                "231",
+                0
+            ]
+        },
+        "class_type": "CLIPTextEncode",
+        "_meta": {
+            "title": "CLIP Text Encode (Prompt)"
+        }
+    },
+    "245": {
+        "inputs": {
+            "CONDITIONING": [
+                "244",
+                0
+            ]
+        },
+        "_meta": {}
+    },
+    "259": {
+        "inputs": {
+            "seed": 299538357940240,
+            "steps": 23,
+            "cfg": 5,
+            "sampler_name": "uni_pc",
+            "scheduler": "simple",
+            "denoise": 1,
+            "model": [
+                "260",
+                0
+            ],
+            "positive": [
+                "236",
+                0
+            ],
+            "negative": [
+                "236",
+                1
+            ],
+            "latent_image": [
+                "236",
+                2
+            ]
+        },
+        "class_type": "KSampler",
+        "_meta": {
+            "title": "KSampler"
+        }
+    },
+    "260": {
+        "inputs": {
+            "shift": 11.000000000000002,
+            "model": [
+                "281",
+                0
+            ]
+        },
+        "class_type": "ModelSamplingSD3",
+        "_meta": {
+            "title": "Shift (Default 11)"
+        }
+    },
+    "263": {
+        "inputs": {
+            "lora_name": "wan/wan_cumshot_i2v.safetensors",
+            "strength_model": 1.0000000000000002,
+            "model": [
+                "277",
+                0
+            ]
+        },
+        "class_type": "LoraLoaderModelOnly",
+        "_meta": {
+            "title": "LoRA 1"
+        }
+    },
+    "264": {
+        "inputs": {
+            "start": 0,
+            "length": -1,
+            "image": [
+                "265",
+                0
+            ]
+        },
+        "class_type": "ImageFromBatch+",
+        "_meta": {
+            "title": "🔧 Image From Batch"
+        }
+    },
+    "265": {
+        "inputs": {
+            "images": [
+                "280",
+                0
+            ]
+        },
+        "class_type": "ImageListToImageBatch",
+        "_meta": {
+            "title": "Image List to Image Batch"
+        }
+    },
+    "266": {
+        "inputs": {
+            "anything": [
+                "264",
+                0
+            ]
+        },
+        "class_type": "easy cleanGpuUsed",
+        "_meta": {
+            "title": "Clean VRAM Used"
+        }
+    },
+    "272": {
+        "inputs": {
+            "upscale_method": "lanczos",
+            "scale_by": 0.5,
+            "image": [
+                "266",
+                0
+            ]
+        },
+        "class_type": "ImageScaleBy",
+        "_meta": {
+            "title": "Upscale Image By"
+        }
+    },
+    "273": {
+        "inputs": {
+            "model": [
+                "281",
+                0
+            ]
+        },
+        "class_type": "ModelPassThrough",
+        "_meta": {
+            "title": "ModelPass"
+        }
+    },
+    "276": {
+        "inputs": {
+            "model": [
+                "229",
+                0
+            ]
+        },
+        "class_type": "ModelPassThrough",
+        "_meta": {
+            "title": "ModelPass"
+        }
+    },
+    "277": {
+        "inputs": {
+            "sage_attention": "auto",
+            "model": [
+                "276",
+                0
+            ]
+        },
+        "class_type": "PathchSageAttentionKJ",
+        "_meta": {
+            "title": "SageAttention"
+        }
+    },
+    "280": {
+        "inputs": {
+            "samples": [
+                "259",
+                0
+            ],
+            "vae": [
+                "232",
+                0
+            ]
+        },
+        "class_type": "VAEDecode",
+        "_meta": {
+            "title": "VAE Decode"
+        }
+    },
+    "281": {
+        "inputs": {
+            "rel_l1_thresh": 0.22000000000000006,
+            "start_percent": 0.1,
+            "end_percent": 1,
+            "cache_device": "offload_device",
+            "coefficients": "i2v_480",
+            "model": [
+                "263",
+                0
+            ]
+        },
+        "class_type": "WanVideoTeaCacheKJ",
+        "_meta": {
+            "title": "WanVideo Tea Cache (native)"
+        }
+    }
+}
