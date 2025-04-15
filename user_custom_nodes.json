@@ -1,3 +1,180 @@
-
-[]
-      
+[
+  {
+    "name": "ComfyUI Essentials",
+    "url": "https://github.com/cubiq/ComfyUI_essentials",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "cubiq",
+      "title": "ComfyUI Essentials",
+      "id": "essentials",
+      "reference": "https://github.com/cubiq/ComfyUI_essentials",
+      "files": [
+        "https://github.com/cubiq/ComfyUI_essentials"
+      ],
+      "install_type": "git-clone",
+      "description": "Essential nodes that are weirdly missing from ComfyUI core. With few exceptions they are new features and not commodities. I hope this will be just a temporary repository until the nodes get included into ComfyUI."
+    },
+    "nodes": [
+      "SimpleMath+",
+      "SimpleMath+",
+      "GetImageSize+",
+      "ImageFromBatch+",
+      "ImageFromBatch+"
+    ],
+    "apt": [],
+    "pip": [],
+    "preemptions": [],
+    "cached": "False"
+  },
+  {
+    "name": "ComfyUI Easy Use",
+    "url": "https://github.com/yolain/ComfyUI-Easy-Use",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "yolain",
+      "title": "ComfyUI Easy Use",
+      "reference": "https://github.com/yolain/ComfyUI-Easy-Use",
+      "files": [
+        "https://github.com/yolain/ComfyUI-Easy-Use"
+      ],
+      "install_type": "git-clone",
+      "description": "To enhance the usability of ComfyUI, optimizations and integrations have been implemented for several commonly used nodes."
+    },
+    "nodes": [
+      "easy cleanGpuUsed"
+    ],
+    "apt": [],
+    "pip": [],
+    "preemptions": [],
+    "cached": "False"
+  },
+  {
+    "name": "KJNodes for ComfyUI",
+    "url": "https://github.com/kijai/ComfyUI-KJNodes",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "kijai",
+      "title": "KJNodes for ComfyUI",
+      "id": "kjnodes",
+      "reference": "https://github.com/kijai/ComfyUI-KJNodes",
+      "files": [
+        "https://github.com/kijai/ComfyUI-KJNodes"
+      ],
+      "install_type": "git-clone",
+      "description": "Various quality of life -nodes for ComfyUI, mostly just visual stuff to improve usability."
+    },
+    "nodes": [
+      "ModelPassThrough",
+      "ModelPassThrough",
+      "PathchSageAttentionKJ",
+      "WanVideoTeaCacheKJ"
+    ],
+    "apt": [],
+    "pip": [],
+    "preemptions": [],
+    "cached": "False"
+  },
+  {
+    "name": "ComfyLiterals",
+    "url": "https://github.com/M1kep/ComfyLiterals",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "M1kep",
+      "title": "ComfyLiterals",
+      "id": "comfyliterals",
+      "reference": "https://github.com/M1kep/ComfyLiterals",
+      "files": [
+        "https://github.com/M1kep/ComfyLiterals"
+      ],
+      "install_type": "git-clone",
+      "description": "Nodes: Int, Float, String, Operation, Checkpoint"
+    },
+    "nodes": [
+      "Int"
+    ],
+    "apt": [],
+    "pip": [],
+    "preemptions": [],
+    "cached": "False"
+  },
+  {
+    "name": "ComfyUI-VideoHelperSuite",
+    "url": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "Kosinkadink",
+      "title": "ComfyUI-VideoHelperSuite",
+      "id": "vhs",
+      "reference": "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite",
+      "files": [
+        "https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite"
+      ],
+      "install_type": "git-clone",
+      "description": "Nodes related to video workflows"
+    },
+    "nodes": [
+      "VHS_VideoCombine",
+      "VHS_VideoCombine"
+    ],
+    "apt": [],
+    "pip": [],
+    "preemptions": [],
+    "cached": "False"
+  },
+  {
+    "name": "ComfyUI Impact Pack",
+    "url": "https://github.com/ltdrdata/ComfyUI-Impact-Pack",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "Dr.Lt.Data",
+      "title": "ComfyUI Impact Pack",
+      "id": "comfyui-impact-pack",
+      "reference": "https://github.com/ltdrdata/ComfyUI-Impact-Pack",
+      "files": [
+        "https://github.com/ltdrdata/ComfyUI-Impact-Pack"
+      ],
+      "install_type": "git-clone",
+      "description": "This node pack offers various detector nodes and detailer nodes that allow you to configure a workflow that automatically enhances facial details. And provide iterative upscaler.\nNOTE: To use the UltralyticsDetectorProvider, you must install the 'ComfyUI Impact Subpack' separately."
+    },
+    "nodes": [
+      "ImageListToImageBatch",
+      "ImageListToImageBatch"
+    ],
+    "apt": [],
+    "pip": [],
+    "preemptions": [
+      "SAMLoader"
+    ],
+    "cached": "False"
+  },
+  {
+    "name": "SyntaxNodes - Image Processing Effects for ComfyUI",
+    "url": "https://github.com/dream-computing/syntax-nodes",
+    "path": "custom_nodes",
+    "fetch_type": "git-clone",
+    "details": {
+      "author": "dream-computing",
+      "title": "SyntaxNodes - Image Processing Effects for ComfyUI",
+      "reference": "https://github.com/dream-computing/syntax-nodes",
+      "files": [
+        "https://github.com/dream-computing/syntax-nodes"
+      ],
+      "install_type": "git-clone",
+      "description": "A collection of custom nodes for ComfyUI designed to apply various image processing effects, stylizations, and analyses."
+    },
+    "nodes": [
+      "ImageListToImageBatch",
+      "ImageListToImageBatch"
+    ],
+    "apt": [],
+    "pip": [],
+    "preemptions": [],
+    "cached": "False"
+  }
+]
